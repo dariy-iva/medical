@@ -9,5 +9,11 @@
   },
   "devDependencies": {
     "nuxt": "3.0.0"
+  },
+  "dependencies": {
+    "@element-plus/nuxt": "^1.0.1",
+    "@pinia/nuxt": "^0.4.6",
+    "element-plus": "^2.2.28",
+    "pinia": "^2.0.28"
   }
 }
