@@ -14,17 +14,23 @@ export default defineNuxtConfig({
             noscript: [
                 // <noscript>JavaScript is required</noscript>
                 { children: 'JavaScript is required' }
-            ]
+            ],
         }
     },
 
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData: '@use "@/assets/styles/colors.scss" as *;'
-                }
-            }
-        }
-    }
+    css: [
+        '~/assets/fonts/Lato/stylesheet.css',
+        '~/assets/styles/main.scss',
+        // '~assets/styles/colors.scss'
+    ],
+
+    // vite: {
+    //     css: {
+    //         preprocessorOptions: {
+    //             scss: {
+    //                 additionalData: '@use "@/assets/styles/colors.scss" as *;'
+    //             }
+    //         },
+    //     }
+    // }
 })
