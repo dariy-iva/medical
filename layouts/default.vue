@@ -1,10 +1,15 @@
 <template>
-Hello
+  <Header/>
 </template>
 
 <script>
+import Header from "~/components/Header.vue";
 export default {
-  name: "default"
+  name: "default",
+
+  components: {
+    Header
+  }
 }
 </script>
 
