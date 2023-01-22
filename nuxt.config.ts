@@ -12,15 +12,19 @@ export default defineNuxtConfig({
                 {rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons'}
             ],
             noscript: [
-                // <noscript>JavaScript is required</noscript>
                 { children: 'JavaScript is required' }
             ],
         }
     },
 
+    modules: [
+        '@element-plus/nuxt',
+    ],
+
     css: [
         '~/assets/fonts/Lato/stylesheet.css',
         '~/assets/styles/main.scss',
+        '~/assets/styles/formElements.scss',
         // '~assets/styles/colors.scss'
     ],
 
