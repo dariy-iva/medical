@@ -38,6 +38,7 @@
 
         <button
           type="button"
+          @click="toggleDrawerMenuStatus"
           class="header__menu-button"
           aria-label="открыть меню"
         >
@@ -45,23 +46,39 @@
         </button>
       </div>
     </div>
+
+    <DrawerMenu :isOpen="drawerMenuIsOpen" :onClose="toggleDrawerMenuStatus"/>
   </header>
 </template>
 
 <script>
 import {navigationLinks} from "~/utils/constants/navigationLinks";
 import SearchInput from "~/components/forms/inputs/SearchInput.vue";
+import DrawerMenu from "~/components/DrawerMenu.vue";
 
 export default {
   name: "Header",
 
   components: {
-    SearchInput
+    SearchInput,
+    DrawerMenu
+  },
+
+  data() {
+    return {
+      drawerMenuIsOpen: true
+    }
   },
 
   computed: {
     navigationLinks() {
       return navigationLinks;
+    }
+  },
+
+  methods: {
+    toggleDrawerMenuStatus() {
+      this.drawerMenuIsOpen = !this.drawerMenuIsOpen;
     }
   }
 }
