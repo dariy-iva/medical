@@ -16,6 +16,14 @@ a {
   color: $primary-color;
 }
 
+a:hover {
+  color: $primary-light-color;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 button {
   padding: 0;
   border: none;
@@ -25,6 +33,12 @@ button {
   &:disabled {
     cursor: not-allowed;
   }
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .wrapper {
@@ -54,12 +68,17 @@ button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.5;
+  text-align: center;
   color: #fff;
   transition: all .3s;
 }
 
 .blue-button:hover {
   background-color: $primary-light-color;
+}
+
+.container-shadow {
+  box-shadow: 0 0 6px rgba(0, 0, 0, .1);
 }
 
 @media (max-width: 1240px) {

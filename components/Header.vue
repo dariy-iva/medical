@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header container-shadow">
     <div class="wrapper header__wrapper">
       <div class="header__row">
         <NuxtLink to="/" class="header__logo"/>
@@ -66,7 +66,7 @@ export default {
 
   data() {
     return {
-      drawerMenuIsOpen: true
+      drawerMenuIsOpen: false
     }
   },
 
@@ -87,7 +87,6 @@ export default {
 <style lang="scss">
 .header {
   padding: 24px 0;
-  box-shadow: 0 0 6px rgba(0, 0, 0, .1);
 
   &__wrapper {
     display: flex;
@@ -139,7 +138,7 @@ export default {
     transition: background-color .3s;
   }
 
-  &__nav-link:hover &__link-icon , &__nav-link.tab_active &__link-icon {
+  &__nav-link:hover &__link-icon, &__nav-link.tab_active &__link-icon {
     background-color: $primary-color;
   }
 
